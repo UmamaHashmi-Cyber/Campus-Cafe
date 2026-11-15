@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Café</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <button id="themeButton" class="header-btn" type="button">Toggle Light/Dark Mode</button>
+
+        <h1>Campus Café</h1>
+
+        <p id="status"></p>
+
+        <p>Fresh food, coffee and a comfortable place to study.</p>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#offers">Offers</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Home Section -->
+        <section id="home" class="hero">
+            <div>
+                <h2>Your Favourite Campus Café</h2>
+                <p>
+                    Enjoy delicious food and drinks while studying
+                    or relaxing with friends.
+                </p>
+                <a class="button" href="#menu">View Menu</a>
+            </div>
+
+            <img src="cafe.jpg" alt="Coffee shop interior">
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu">
+            <h2>Popular Choices</h2>
+
+            <!-- Menu Filters -->
+            <div class="filter-controls">
+                <button type="button" id="allButton" class="filter-btn active">All</button>
+                <button type="button" id="drinksButton" class="filter-btn">Drinks</button>
+                <button type="button" id="pastriesButton" class="filter-btn">Pastries</button>
+            </div>
+
+            <!-- Menu Items Cards with Images -->
+            <div class="cards">
+
+                <article class="card menu-item drink">
+                    <img src="coffee.jpg" alt="Classic Coffee" class="menu-img">
+                    <h3>Classic Coffee</h3>
+                    <p>Freshly brewed coffee for your study sessions.</p>
+                    <strong>Rs. 250</strong>
+                    <label class="order-label">
+                        <input type="checkbox" class="item" value="250"> Order Coffee
+                    </label>
+                </article>
+
+                <article class="card menu-item drink">
+                    <img src="sandwich.jpg" alt="Chicken Sandwich" class="menu-img">
+                    <h3>Chicken Sandwich</h3>
+                    <p>A fresh sandwich with chicken, cheese and vegetables.</p>
+                    <strong>Rs. 450</strong>
+                    <label class="order-label">
+                        <input type="checkbox" class="item" value="450"> Order Sandwich
+                    </label>
+                </article>
+
+                <article class="card menu-item pastry">
+                    <img src="cake.jpg" alt="Chocolate Cake" class="menu-img">
+                    <h3>Chocolate Cake</h3>
+                    <p>Soft chocolate cake served with a hot drink.</p>
+                    <strong>Rs. 350</strong>
+                    <label class="order-label">
+                        <input type="checkbox" class="item" value="350"> Order Cake
+                    </label>
+                </article>
+
+            </div>
+
+            <p id="total">Total: Rs. 0</p>
+        </section>
+
+        <!-- Offers Section -->
+        <section id="offers" class="two-column">
+
+            <article id="offers-article">
+                <h2>Today's Special</h2>
+                <p>
+                    Get a coffee and sandwich together
+                    for a special student price.
+                </p>
+
+                <p id="extraText" style="display: none;">
+                    Campus Café is also a peaceful place where
+                    students can study, relax and spend time
+                    with friends. High-speed Wi-Fi and quiet study
+                    corners are open to all students.
+                </p>
+
+                <button type="button" id="readButton">Read More</button>
+
+                <h3>How to Order</h3>
+                <ol type="A">
+                    <li>Choose your item.</li>
+                    <li>Place your order.</li>
+                    <li>Collect your food.</li>
+                </ol>
+            </article>
+
+            <aside>
+                <h3>Useful Links</h3>
+                <ul>
+                    <li>
+                        <a href="https://www.google.com" target="_blank" rel="noopener">Find us on Google</a>
+                    </li>
+                    <li>
+                        <a href="mailto:campuscafe@example.com">Email the Café</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact Form</a>
+                    </li>
+                </ul>
+            </aside>
+
+        </section>
+
+        <!-- Opening Hours Table -->
+        <section>
+            <h2>Weekly Opening Hours</h2>
+
+            <table id="hoursTable">
+                <caption>Campus Café Opening Schedule</caption>
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Opening Time</th>
+                        <th>Closing Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monday - Friday</td>
+                        <td>8:00 AM</td>
+                        <td>8:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Saturday</td>
+                        <td>10:00 AM</td>
+                        <td>6:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Sunday</td>
+                        <td>Closed</td>
+                        <td>Closed</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="form-section">
+            <h2>Contact Us</h2>
+
+            <form id="contactForm">
+                <!-- Name -->
+                <label for="name">Name:</label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your name"
+                >
+
+                <!-- Email -->
+                <label for="email">Email:</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your Email"
+                >
+
+                <!-- Birth Year -->
+                <label for="birth-year">Birth Year:</label>
+                <input
+                    type="text"
+                    id="birth-year"
+                    name="birth_year"
+                    placeholder="e.g. 2002"
+                >
+                <p id="age-message" class="info-msg"></p>
+
+                <!-- Special Notes -->
+                <label for="special-notes">Special Request:</label>
+                <textarea
+                    id="special-notes"
+                    name="special_notes"
+                    maxlength="100"
+                    rows="3"
+                    placeholder="Write special instructions"
+                ></textarea>
+                <p id="counter" class="counter-msg">100 characters remaining</p>
+
+                <!-- Message -->
+                <label for="message">Message:</label>
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    placeholder="Write your message"
+                ></textarea>
+
+                <p class="section-label">Preferred contact method:</p>
+                <div class="contact-choice">
+                    <label>
+                        <input type="radio" name="contact_method" value="email" checked> Email
+                    </label>
+                    <label style="margin-left: 15px;">
+                        <input type="radio" name="contact_method" value="phone"> Phone
+                    </label>
+                </div>
+
+                <label class="checkbox-label">
+                    <input type="checkbox" name="updates">
+                    I want to receive café updates.
+                </label>
+
+                <button type="submit">Send Message</button>
+
+                <p id="form-message" class="feedback-msg"></p>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Campus Café | Designed for Web Engineering</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
