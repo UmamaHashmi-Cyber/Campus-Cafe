@@ -33,10 +33,9 @@ Developed for Web Engineering coursework using HTML5, CSS3, and JavaScript, the 
 3. Open the project folder.
 4. Double-click index.html to open the website in your browser.
 Note: Use a modern browser such as Google Chrome, Microsoft Edge, or Mozilla Firefox.
-🌐 Live Demo
-View Campus Café Website
+##🌐 Live Demo
 
-Replace the placeholder above with the actual GitHub Pages URL after publishing.
+[View Campus Café Website](https://umamahashmi-cyber.github.io/Campus-Cafe/)
 📁 Project Structure
 Campus-Cafe/
 ├── index.html
